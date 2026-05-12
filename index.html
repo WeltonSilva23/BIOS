@@ -54,6 +54,13 @@
         </button>
         </a>
     </a>
+    <!-- BOTÃO CRM -->
+       <a href="#" class="link" onclick="abrirModal()">
+    <button class="degrade">
+        <span>Baixe o Clube de Descontos</span>
+        <i class="bi bi-phone"></i>
+    </button>
+</a>
         </section>
 <div class="rodape">
         <p>&copy; 2023 - Todos os direitos reservados - Desenvolvido por Welton Silva</p>
@@ -61,4 +68,44 @@
 
 
 </body>
+<!-- MODAL CRM -->
+<div id="modalCRM" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <h2>Escolha seu dispositivo</h2>
+
+        <a href="https://play.google.com/store/search?q=clube+bianchini&c=apps&hl=pt_BR" target="_blank">
+            <button class="degrade modal-btn">
+                <i class="bi bi-android2"></i>
+                Android
+            </button>
+        </a>
+
+        <a href="https://apps.apple.com/br/app/clube-bianchini/id6754994363" target="_blank">
+            <button class="degrade modal-btn">
+                <i class="bi bi-apple"></i>
+                iOS
+            </button>
+        </a>
+    </div>
+</div>
+
+<script>
+    function abrirModal() {
+        document.getElementById("modalCRM").style.display = "flex";
+    }
+
+    function fecharModal() {
+        document.getElementById("modalCRM").style.display = "none";
+    }
+
+    // Fecha clicando fora
+    window.onclick = function(event) {
+        const modal = document.getElementById("modalCRM");
+
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 </html>
